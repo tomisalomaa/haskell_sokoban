@@ -36,6 +36,7 @@ updateCurrentLoc (x,y) input =
         Down    -> (x, y+1)
         Left    -> (x-1, y)
         Right   -> (x+1, y)
+        Restart -> (x,y)
 
 {-
 This game only implements a single level and it is
@@ -52,6 +53,15 @@ level = unlines
     ,"#    o  ##"
     ,"#   ## @##"
     ,"##########"]
+
+-- Test level
+{-
+level = unlines
+    ["##########"
+    ,"#  # ##  #"
+    ,"#.o @  o.#"
+    ,"##########"]
+-}
 
 {-
 Function for loading the level. 
@@ -119,8 +129,12 @@ getInput = do
         'a' -> return Left
         's' -> return Down
         'd' -> return Right
-        'r' -> return Restart -- not implemented yet
+        'r' -> return Restart
         otherwise -> getInput
+
+{-
+Truth check functions for game elements
+-}
 
 isStorages :: World -> Coord -> Bool
 isStorages world coord = elem coord $ storages world
@@ -133,6 +147,9 @@ isCrate world coord = elem coord $ crates world
 
 isFinished :: World -> Bool
 isFinished world = sort (crates world) == sort (storages world)
+
+isRestart :: Input -> Bool
+isRestart input = input == Restart
 
 main :: IO()
 -- Main simply runs the gameloop 
@@ -148,10 +165,26 @@ main = do
     hSetBuffering stdout NoBuffering
     gameLoop $ loadLevel level
 
+{-
+Loop functions as follows:
+1) Represent the current state of the game world by executing the loadWorld with current world data.
+2) Read input from user.
+3) Define a changed world by executing the modifyWorld with the given input as parameters.
+4) Determine whether all the game goals have been met and show the end state if so;
+5) If goals have not been met, check if the level needs to be restarted and do so;
+6) If the level does not need to be restarted, play the move and loop again.
+-}
 gameLoop world = do
     loadWorld world
     input <- getInput
     let world' = modifyWorld world input
     if isFinished world'
-        then loadWorld world' >> print "SUCCESS! All crates moved to storages."
+        then do
+            loadWorld world'
+            print "SUCCESS! All crates moved to storages."
+        else return ()
+    if isRestart input
+        then do
+            print "RESTART level!"
+            gameLoop $ loadLevel level
         else gameLoop world'
