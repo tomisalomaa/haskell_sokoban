@@ -37,7 +37,7 @@ o | Crate
 \* | A stored crate / crate inside a storage
 \+ | Player on a storage
 
-### State of the game / additional info
+## State of the game / additional info
 
 The current version of the game only includes one hard coded level.
 The game ends as soon as all crates have been stored. If you find yourself stuck, not being able to complete the level,
