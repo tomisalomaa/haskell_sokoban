@@ -41,4 +41,5 @@ o | Crate
 
 The current version of the game only includes one hard coded level.
 The game ends as soon as all crates have been stored. If you find yourself stuck, not being able to complete the level,
-there is currently no functionality available to restart the level --> close and start the game again if you wish to replay.
+~~there is currently no functionality available to restart the level --> close and start the game again~~  
+input 'r' to reload the current level if you wish to replay. This can also be used in case one wants to replay the level after completing.
