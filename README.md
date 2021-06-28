@@ -27,13 +27,15 @@ Linux os should not suffer from such a bug and each input characted should be re
 
 ### Legend
 
-@&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Player  
-o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Crate  
-#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wall  
-<space>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Floor / open space  
-.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Storage  
-*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A stored crate / crate inside a storage  
-+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Player on a storage  
+Character | Represents
+--- | ---
+@ | Player  
+o | Crate  
+# | Wall  
+<space> | Floor / open space  
+. | Storage  
+* | A stored crate / crate inside a storage  
++ | Player on a storage  
 
 ### State of the game / additional info
 
