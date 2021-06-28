@@ -16,10 +16,10 @@ Exe can be found from the sokoban folder.
 
 The game uses WASD control scheme to move the player worker around the level:
 
-w -- Up
-a -- Left
-s -- Down
-d -- Right
+w -- Up  
+a -- Left  
+s -- Down  
+d -- Right  
 
 NOTE:
 Due to a bug affecting the game when played on Windows os, each input needs to be "confirmed" by entering the line in cmd console.
