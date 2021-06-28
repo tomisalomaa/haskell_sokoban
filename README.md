@@ -35,7 +35,7 @@ o | Crate
 <space> | Floor / open space
 . | Storage
 \* | A stored crate / crate inside a storage
-+ | Player on a storage
+\+ | Player on a storage
 
 ### State of the game / additional info
 
