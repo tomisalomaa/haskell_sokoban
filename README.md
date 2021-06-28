@@ -25,6 +25,16 @@ NOTE:
 Due to a bug affecting the game when played on Windows os, each input needs to be "confirmed" by entering the line in cmd console.
 Linux os should not suffer from such a bug and each input characted should be read as soon as struck on the console.
 
+### Legend
+
+@&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Player
+o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Crate
+#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wall
+<space>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Floor / open space
+.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Storage
+*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A stored crate / crate inside a storage
++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Player on a storage
+
 ### State of the game / additional info
 
 The current version of the game only includes one hard coded level.
