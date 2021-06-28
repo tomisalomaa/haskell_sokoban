@@ -31,7 +31,7 @@ Character | Represents
 --- | ---
 @ | Player
 o | Crate
-# | Wall
+\# | Wall
 <space> | Floor / open space
 . | Storage
 * | A stored crate / crate inside a storage
